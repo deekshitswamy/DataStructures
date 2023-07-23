@@ -41,6 +41,25 @@ class Solution:
  
         return f(n)
 
+"""
+def createLinkedList(self, digits: List) -> ListNode:
+        headnode = ListNode()
+        prevnode = ListNode()
+        first = True
+        for d in digits:
+            if first:
+                headnode.val = d
+                prevnode = headnode
+                first = False
+                continue
+            node = ListNode()
+            node.val = d
+            prevnode.next = node
+            prevnode = node    
+        return headnode
+"""
+
+
 # example 1
 #n = 7
 root = TreeNode()
