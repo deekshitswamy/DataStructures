@@ -62,12 +62,13 @@ def createLinkedList(self, digits: List) -> ListNode:
 
 # example 1
 #n = 7
-root = TreeNode()
+#root = TreeNode()
 
 #example 2
 #n = 3
-root = TreeNode()
+#root = TreeNode()
 
 obj = Solution()
-data = obj.allPossibleFBT(root)
+#data = obj.allPossibleFBT(n = 7)
+data = obj.allPossibleFBT(n = 3)
 print(data)
