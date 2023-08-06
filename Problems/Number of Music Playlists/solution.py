@@ -1,8 +1,23 @@
 import io
-from typing import List
+from functools import cache
 class Solution:
     def numMusicPlaylists(self, n: int, goal: int, k: int) -> int:
-        pass
+        mod=10**9+7
+        @cache
+        def fn(i,x):
+            if i==goal:
+                return x==n
+
+            ans=0
+            if x<n:
+                ans+=(n-x)*fn(i+1,x+1)
+
+            if k<x:
+                ans+=(x-k)*fn(i+1,x)
+
+            return ans%mod
+
+        return fn(0,0) 
 
 obj = Solution()
 #data = obj.numMusicPlaylists(n = 3, goal = 3, k = 1)
