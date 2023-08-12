@@ -26,6 +26,6 @@ class Solution:
 
 
 obj = Solution()
-data = obj.uniquePathsWithObstacles(obstacleGrid = [[0,0,0],[0,1,0],[0,0,0]])
-#data = obj.uniquePathsWithObstacles(obstacleGrid = [[0,1],[0,0]])
+#data = obj.uniquePathsWithObstacles(obstacleGrid = [[0,0,0],[0,1,0],[0,0,0]])
+data = obj.uniquePathsWithObstacles(obstacleGrid = [[0,1],[0,0]])
 print(data)
