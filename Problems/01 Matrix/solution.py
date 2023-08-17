@@ -25,6 +25,6 @@ class Solution:
 
 
 obj = Solution()
-data = obj.updateMatrix(mat = [[0,0,0],[0,1,0],[0,0,0]])
-#data = obj.updateMatrix(mat = [[0,0,0],[0,1,0],[1,1,1]])
+#data = obj.updateMatrix(mat = [[0,0,0],[0,1,0],[0,0,0]])
+data = obj.updateMatrix(mat = [[0,0,0],[0,1,0],[1,1,1]])
 print(data)
