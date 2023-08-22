@@ -1,7 +1,8 @@
 import io
 class Solution:
     def repeatedSubstringPattern(self, s: str) -> bool:
-        pass
+        ds=(s+s)[1:-1]
+        return s in ds
 
 obj = Solution()
 #data = obj.repeatedSubstringPattern(s = "abab")
