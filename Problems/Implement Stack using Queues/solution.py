@@ -1,23 +1,23 @@
 import io
+from collections import deque
 class MyStack:
 
     def __init__(self):
-        pass
-        
+        self.q=deque()
 
     def push(self, x: int) -> None:
-        pass
-        
+        self.q.append(x)
 
     def pop(self) -> int:
-        pass
-        
+        for i in range(len(self.q)-1):
+            self.push(self.q.popleft())
+        return self.q.popleft()    
 
     def top(self) -> int:
-        pass
+        return self.q[-1]
 
     def empty(self) -> bool:
-        pass
+        return len(self.q)==0
         
 
 
