@@ -1,5 +1,4 @@
 import io
-
 # Definition for singly-linked list.
 class ListNode:
     def __init__(self, x):
@@ -8,7 +7,15 @@ class ListNode:
 
 class Solution:
     def hasCycle(self, head: [ListNode]) -> bool:
-        pass
+        slow=head
+        fast=head
+        while slow and fast and fast.next:
+            slow=slow.next
+            fast=fast.next.next
+            if slow==fast:
+                return True
+
+        return False 
 
 obj = Solution()
 #data = obj.hasCycle(head = [3,2,0,-4], pos = 1)
