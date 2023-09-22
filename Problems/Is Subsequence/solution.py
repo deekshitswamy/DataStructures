@@ -2,7 +2,8 @@ import io
 from functools import cache
 class Solution:
     def isSubsequence(self, s: str, t: str) -> bool:
-        pass
+        x=iter(t)
+        return all(ch in x for ch in s)
 
 obj = Solution()
 data = obj.isSubsequence(s = "abc", t = "ahbgdc")
