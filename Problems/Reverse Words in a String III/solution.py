@@ -3,7 +3,7 @@ from typing import List
 
 class Solution:
     def reverseWords(self, s: str) -> str:
-        pass
+        return " ".join([x[::-1] for x in s.split()])
 
 obj = Solution()
 #data = obj.reverseWords(s = "Let's take LeetCode contest")
