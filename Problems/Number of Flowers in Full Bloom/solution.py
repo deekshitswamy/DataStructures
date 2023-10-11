@@ -2,7 +2,15 @@ import io
 from typing import List
 class Solution:
     def fullBloomFlowers(self, flowers: List[List[int]], people: List[int]) -> List[int]:
-        pass
+        start=sorted(flowers,key=lambda x:x[0])
+        end=sorted(flowers,key=lambda x:x[1])
+        ans=[]
+        for man in people:
+            i=bisect_left(end,man,key=lambda x:x[1])
+            j=bisect_right(start,man,key=lambda x:x[0])
+            ans.append(j-i)
+
+        return ans
 
 obj = Solution()
 #data = obj.fullBloomFlowers(flowers = [[1,6],[3,7],[9,12],[4,13]], poeple = [2,3,7,11])
