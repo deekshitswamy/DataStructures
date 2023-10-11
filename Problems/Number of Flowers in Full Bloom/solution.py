@@ -1,4 +1,5 @@
 import io
+from bisect import bisect_left, bisect_right
 from typing import List
 class Solution:
     def fullBloomFlowers(self, flowers: List[List[int]], people: List[int]) -> List[int]:
