@@ -6,6 +6,6 @@ class Solution:
 
 obj = Solution()
 #data = obj.getRow(rowIndex = 3)
-data = obj.getRow(rowIndex = 0)
+#data = obj.getRow(rowIndex = 0)
 data = obj.getRow(rowIndex = 1)
 print(data)
