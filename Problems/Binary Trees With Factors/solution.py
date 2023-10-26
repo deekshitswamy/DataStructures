@@ -1,5 +1,6 @@
 import io
 from typing import List
+from collections import defaultdict
 
 class Solution:
     def numFactoredBinaryTrees(self, arr: List[int]) -> int:
