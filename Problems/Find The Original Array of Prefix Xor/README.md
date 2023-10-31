@@ -1,4 +1,5 @@
 # 2433. Find The Original Array of Prefix Xor 
+
 You are given an **integer** array `pref` of size `n`. Find and return _the array_ `arr` _of size_ `n` _that satisfies_:
 
 - `pref[i] = arr[0] ^ arr[1] ^ ... ^ arr[i]`.
