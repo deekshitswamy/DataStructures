@@ -2,7 +2,12 @@ import io
 from typing import List
 class Solution:
     def getLastMoment(self, n: int, left: List[int], right: List[int]) -> int:
-        pass
+        ans=0
+        for i in left:
+            ans=max(i,ans)
+        for i in right:
+            ans=max(n-i,ans)
+        return ans
 
 obj = Solution()
 #data = obj.getLastMoment(n = 4, left = [4,3], right = [0,1])
