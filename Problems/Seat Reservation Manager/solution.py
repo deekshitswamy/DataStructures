@@ -1,17 +1,17 @@
 import io
+import heapq
 from typing import List
+
 class SeatManager:
 
     def __init__(self, n: int):
-        pass
-        
+        self.heap=list(range(1,n+1))
 
     def reserve(self) -> int:
-        pass
-        
+        return heapq.heappop(self.heap)
 
     def unreserve(self, seatNumber: int) -> None:
-        pass
+        heapq.heappush(self.heap,seatNumber)
         
 
 
