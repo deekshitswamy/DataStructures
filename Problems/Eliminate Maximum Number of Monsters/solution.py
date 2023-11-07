@@ -1,5 +1,6 @@
 import io
 from typing import List
+
 class Solution:
     def eliminateMaximum(self, dist: List[int], speed: List[int]) -> int:
         n=len(dist)
