@@ -1,6 +1,7 @@
 import io
 from typing import List
 import collections
+
 class Solution:
     def restoreArray(self, adjacentPairs: List[List[int]]) -> List[int]:
         adjs=collections.defaultdict(set)
