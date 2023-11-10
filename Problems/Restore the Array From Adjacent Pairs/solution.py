@@ -12,12 +12,14 @@ class Solution:
         for node,adj in adjs.items():
             if len(adj)==1:
                 break
+
         ans=[node]
         while adjs[node]:
             new=adjs[node].pop()
             ans.append(new)
             adjs[new].remove(node)
             node=new
+            
         return ans
 
 obj = Solution()
