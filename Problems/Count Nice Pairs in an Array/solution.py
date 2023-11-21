@@ -1,4 +1,5 @@
 import io
+import collections
 from typing import List
 class Solution:
     def countNicePairs(self, nums: List[int]) -> int:
