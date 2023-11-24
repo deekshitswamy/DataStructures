@@ -2,7 +2,15 @@ import io
 from typing import List
 class Solution:
     def maxCoins(self, piles: List[int]) -> int:
-        pass
+        piles.sort()
+        q=collections.deque(piles)
+        ans=0
+        while len(q)>0:
+            q.popleft()
+            q.pop()
+            ans+=q[-1]
+            q.pop()
+        return ans
 
 obj = Solution()
 #data = obj.maxCoins(piles = [2,4,1,2,7,8])
