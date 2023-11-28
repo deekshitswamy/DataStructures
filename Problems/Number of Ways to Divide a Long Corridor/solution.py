@@ -1,5 +1,4 @@
 import io
-from typing import List
 class Solution:
     def numberOfWays(self, corridor: str) -> int:
         mod=10**9+7
