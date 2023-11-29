@@ -2,7 +2,7 @@ import io
 from typing import List
 class Solution:
     def hammingWeight(self, n: int) -> int:
-        pass
+        return bin(n).count('1')
 
 obj = Solution()
 #data = obj.hammingWeight(n = 00000000000000000000000000001011)
