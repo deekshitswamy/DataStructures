@@ -1,5 +1,4 @@
 import io
-from typing import List
 class Solution:
     def hammingWeight(self, n: int) -> int:
         return bin(n).count('1')
