@@ -2,7 +2,7 @@ import io
 from typing import List
 class Solution:
      def arrayStringsAreEqual(self, word1: List[str], word2: List[str]) -> bool:
-        pass
+        return "".join(word1) == "".join(word2)
 
 obj = Solution()
 #data = obj.arrayStringsAreEqual(word1 = ["ab", "c"], word2 = ["a", "bc"])
