@@ -8,7 +8,19 @@ class TreeNode:
         self.right = right
 class Solution:
     def tree2str(self, root:TreeNode) -> str:
-        pass
+        ans=[]
+        def preorder(root):
+            if not root:
+                return
+            ans.append("(")
+            ans.append(str(root.val))
+            if not root.left and root.right:
+                ans.append("()")
+            preorder(root.left)
+            preorder(root.right)
+            ans.append(")")
+        preorder(root)            
+        return "".join(ans)[1:-1]
 
 obj = Solution()
 #data = obj.tree2str(root = [1,2,3,4])
