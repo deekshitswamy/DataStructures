@@ -8,7 +8,9 @@ class TreeNode:
         self.right = right
 class Solution:
     def inorderTraversal(self, root: TreeNode) -> List[int]:
-        pass
+        if root==None:
+            return []
+        return self.inorderTraversal(root.left)+[root.val]+self.inorderTraversal(root.right)
 
 obj = Solution()
 #data = obj.inorderTraversal(root = [1,None,2,3])
