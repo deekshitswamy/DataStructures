@@ -2,7 +2,8 @@ import io
 from typing import List
 class Solution:
     def maxProduct(self, nums: List[int]) -> int:
-        pass
+        nums.sort()
+        return (nums[-1]-1)*(nums[-2]-1)
 
 obj = Solution()
 #data = obj.maxProduct(nums = [3,4,5,2])
