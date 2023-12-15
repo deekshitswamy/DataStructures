@@ -2,7 +2,8 @@ import io
 from typing import List
 class Solution:
     def destCity(self, paths: List[List[str]]) -> str:
-        pass
+        frm,to=zip(*paths)
+        return (set(to)-set(frm)).pop()
 
 obj = Solution()
 #data = obj.destCity(paths = [["London","New York"],["New York","Lima"],["Lima","Sao Paulo"]])
