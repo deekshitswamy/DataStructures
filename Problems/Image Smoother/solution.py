@@ -1,6 +1,7 @@
 import io
-from typing import List
 import numpy as np
+from typing import List
+from itertools import product
 
 class Solution:
     def imageSmoother(self, img: List[List[int]]) -> List[List[int]]:
