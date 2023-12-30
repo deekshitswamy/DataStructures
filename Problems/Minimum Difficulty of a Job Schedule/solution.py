@@ -1,5 +1,7 @@
 import io
+import math
 from typing import List
+from functools import cache
 class Solution:
     def minDifficulty(self, jobDifficulty: List[int], d: int) -> int:
         @cache
