@@ -1,5 +1,10 @@
+
 import io
+from math import inf
 from typing import List
+from functools import cache
+from bisect import bisect_left
+from collections import defaultdict
 class Solution:
     def getLengthOfOptimalCompression(self, s: str, k: int) -> int:
         ### INDEX BUILDING ###
