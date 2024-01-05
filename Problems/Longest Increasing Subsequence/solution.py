@@ -2,7 +2,15 @@ import io
 from typing import List
 class Solution:
     def lengthOfLIS(self, nums: List[int]) -> int:
-        pass
+        n=len(nums)
+        ans=[nums[0]]
+        for num in nums:
+            res=bisect_left(ans,num)
+            if res==len(ans):
+                ans.append(num)
+            elif ans[res]>num:
+                ans[res]=num
+        return len(ans)
 
 obj = Solution()
 #data = obj.lengthOfLIS(nums = [10,9,2,5,3,7,101,18])
