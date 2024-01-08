@@ -1,5 +1,6 @@
 import io
 from typing import List
+from collections import defaultdict
 class Solution:
     def numberOfArithmeticSlices(self, nums: List[int]) -> int:
         res,n=0,len(nums)
