@@ -8,7 +8,17 @@ class TreeNode:
         self.right = right
 class Solution:
     def rangeSumBST(self, root: TreeNode, low: int, high: int) -> int:
-        pass
+        s = 0
+        def explore(root, low, high):
+            nonlocal s
+            if low<=root.val<=high:
+                s += root.val
+            if root.left and low<root.val:
+                explore(root.left, low, high)
+            if root.right and high>=root.val:
+                explore(root.right, low, high)
+        explore(root, low, high)
+        return s
 
 obj = Solution()
 #data = obj.rangeSumBST(n = 1)
