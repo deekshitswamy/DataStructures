@@ -7,7 +7,16 @@ class TreeNode:
         self.right = right
 class Solution:
     def leafSimilar(self, root1: TreeNode, root2: TreeNode) -> bool:
-        pass
+        def check(root,arr):
+            if not root:
+                return arr
+            if not root.left and not root.right:
+                arr+=[root.val]
+                return arr
+            check(root.left,arr)
+            check(root.right,arr)
+            return arr
+        return check(root1,[])==check(root2,[])
 
 obj = Solution()
 #data = obj.leafSimilar(n = 1)
