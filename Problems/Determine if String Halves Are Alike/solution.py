@@ -22,4 +22,5 @@ class Solution:
 obj = Solution()
 #data = obj.halvesAreAlike(s = "book")
 data = obj.halvesAreAlike(s = "textbook")
+
 print(data)
