@@ -2,7 +2,7 @@ import io
 from typing import List
 class Solution:
     def minSteps(self, s: str, t: str) -> int:
-        pass
+        return sum((Counter(t)-Counter(s)).values())
 
 obj = Solution()
 #data = obj.minSteps(s = "bab", t = "aba")
