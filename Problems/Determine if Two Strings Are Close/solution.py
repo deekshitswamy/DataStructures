@@ -1,5 +1,6 @@
 import io
 from typing import List
+from collections import Counter
 class Solution:
     def closeStrings(self, word1: str, word2: str) -> bool:
         if len(word1) != len(word2):
