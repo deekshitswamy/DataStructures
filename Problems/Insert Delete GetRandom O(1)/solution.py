@@ -1,18 +1,29 @@
 import io
 from typing import List
 class RandomizedSet:
-
     def __init__(self):
-        pass
-        
+        self.values = []
+
     def insert(self, val: int) -> bool:
-        pass
+
+        if val not in self.values:
+            
+            self.values.append(val)
+            return True
+        else:
+            return False
         
     def remove(self, val: int) -> bool:
-        pass
-        
+
+        if val in self.values:
+
+            self.values.remove(val)
+            return True
+        else:
+            return False 
+
     def getRandom(self) -> int:
-        pass
+        return random.choice(self.values)
         
 
 val = 12
