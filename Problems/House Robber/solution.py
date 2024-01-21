@@ -13,6 +13,6 @@ class Solution:
         return adjacent
 
 obj = Solution()
-#data = obj.testfunc(nums = [1,2,3,1])
-data = obj.testfunc(nums = [2,7,9,3,1])
+#data = obj.rob(nums = [1,2,3,1])
+data = obj.rob(nums = [2,7,9,3,1])
 print(data)
