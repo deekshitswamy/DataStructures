@@ -8,7 +8,21 @@ class TreeNode:
         self.right = right
 class Solution:
     def pseudoPalindromicPaths (self, root: TreeNode) -> int:
-        pass
+        ans=0
+        def search(node,even):
+            if node==None:
+                return
+            even[node.val]= not even[node.val]
+            if node.left==None and node.right==None:
+                if sum(even)<=1:
+                    nonlocal ans
+                    ans+=1
+            else:
+                search(node.left,even)
+                search(node.right,even)
+            even[node.val]= not even[node.val]
+        search(root,[False]*10)
+        return ans
 
 obj = Solution()
 #data = obj.pseudoPalindromicPaths(root = [2,3,1,3,1,null,1])
