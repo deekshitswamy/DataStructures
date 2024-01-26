@@ -1,5 +1,5 @@
 import io
-from typing import List
+from functools import lru_cache
 class Solution:
     def findPaths(self, m: int, n: int, maxMove: int, startRow: int, startColumn: int) -> int:
         @lru_cache(None)
