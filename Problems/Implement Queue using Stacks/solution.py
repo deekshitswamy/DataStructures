@@ -28,8 +28,10 @@ class MyQueue:
 # Your MyQueue object will be instantiated and called as such:
 input_command = ["MyQueue", "push", "push", "peek", "pop", "empty"]
 data = [[], [1], [2], [], [], []]
-# obj = MyQueue()
-# obj.push()
-# param_2 = obj.pop()
-# param_3 = obj.peek()
-# param_4 = obj.empty()
+
+#myQueue = MyQueue()
+#myQueue.push(1) # queue is: [1]
+#myQueue.push(2) # queue is: [1, 2] (leftmost is front of the queue)
+#myQueue.peek() # return 1
+#myQueue.pop() # return 1, queue is [2]
+#myQueue.empty() # return false
