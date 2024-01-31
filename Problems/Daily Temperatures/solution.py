@@ -19,7 +19,7 @@ class Solution:
         return reversed(answers)
 
 obj = Solution()
-#data = obj.dailyTemperatures(n = 1)
-#data = obj.dailyTemperatures(n = 2)
-data = obj.dailyTemperatures(n = 2)
+#data = obj.dailyTemperatures(temperatures = [73,74,75,71,69,72,76,73])
+#data = obj.dailyTemperatures(temperatures = [30,40,50,60])
+data = obj.dailyTemperatures(temperatures = [30,60,90])
 print(data)
