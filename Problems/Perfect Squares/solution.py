@@ -1,5 +1,6 @@
 import io
 from typing import List
+from collections import deque
 class Solution:
     def numSquares(self, n: int) -> int:
         q = deque()
