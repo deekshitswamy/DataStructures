@@ -1,5 +1,6 @@
 import io
 from typing import List
+from collections import Counter
 class Solution:
     def findLeastNumOfUniqueInts(self, arr: List[int], k: int) -> int:
         freq_map = Counter(arr)
