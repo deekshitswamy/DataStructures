@@ -1,4 +1,5 @@
 import io
+from math import log2
 from typing import List
 class Solution:
     def isPowerOfTwo(self, n: int) -> bool:
