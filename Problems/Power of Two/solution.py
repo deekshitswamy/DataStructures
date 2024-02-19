@@ -2,7 +2,7 @@ import io
 from typing import List
 class Solution:
     def isPowerOfTwo(self, n: int) -> bool:
-        pass
+        return n>0 and log2(n)==int(log2(n))
 
 obj = Solution()
 #data = obj.isPowerOfTwo(n = 1)
