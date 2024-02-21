@@ -2,7 +2,12 @@ import io
 from typing import List
 class Solution:
     def rangeBitwiseAnd(self, left: int, right: int) -> int:
-        pass
+        ans=0
+        while left<right:
+            left=left>>1
+            right=right>>1
+            ans+=1
+        return left<<ans
 
 obj = Solution()
 #data = obj.rangeBitwiseAnd(left = 5, right = 7)
