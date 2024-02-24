@@ -1,5 +1,7 @@
 import io
+import itertools
 from typing import List
+from collections import defaultdict
 class Solution:
     def findAllPeople(self, n: int, meetings: List[List[int]], firstPerson: int) -> List[int]:
         meetings.sort(key=lambda x:x[2])
