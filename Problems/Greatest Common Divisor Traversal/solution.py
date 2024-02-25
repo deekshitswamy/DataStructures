@@ -1,5 +1,7 @@
 import io
+from math import isqrt
 from typing import List
+from collections import defaultdict
 class Solution:
     def canTraverseAllPairs(self, nums: List[int]) -> bool:
         n=len(nums)
