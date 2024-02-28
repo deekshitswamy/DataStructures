@@ -8,7 +8,14 @@ class TreeNode:
         self.right = right
 class Solution:
     def findBottomLeftValue(self, root: TreeNode) -> int:
-        pass
+        q=deque([root])
+        while q:
+            node=q.popleft()
+            if node.right:
+                q.append(node.right)
+            if node.left:
+                q.append(node.left)
+        return node.val 
 
 obj = Solution()
 #data = obj.findBottomLeftValue(root = [2,1,3])
