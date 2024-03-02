@@ -2,7 +2,10 @@ import io
 from typing import List
 class Solution:
     def sortedSquares(self, nums: List[int]) -> List[int]:
-        pass
+        ans=[]
+        for x in nums:
+            ans.append(x**2)
+        return sorted(ans)
 
 obj = Solution()
 #data = obj.sortedSquares(nums = [-4,-1,0,3,10])
