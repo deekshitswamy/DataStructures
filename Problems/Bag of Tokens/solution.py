@@ -1,5 +1,6 @@
 import io
 from typing import List
+from collections import deque
 class Solution:
     def bagOfTokensScore(self, tokens: List[int], power: int) -> int:
         q=deque(sorted(tokens))
