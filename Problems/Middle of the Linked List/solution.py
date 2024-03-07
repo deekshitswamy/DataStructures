@@ -7,7 +7,12 @@ class ListNode:
         self.next = next
 class Solution:
     def middleNode(self, head: ListNode) -> ListNode:
-        pass
+        slow = head
+        fast=head
+        while fast and fast.next:
+            slow=slow.next
+            fast=fast.next.next
+        return slow
 
 obj = Solution()
 #data = obj.testfunc(n = 1)
