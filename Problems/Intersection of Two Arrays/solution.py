@@ -25,7 +25,6 @@ class Solution:
         return result
 
 obj = Solution()
-#data = obj.intersection(n = 1)
-#data = obj.intersection(n = 2)
-data = obj.intersection(n = 2)
+#data = obj.intersection(nums1 = [1,2,2,1], nums2 = [2,2])
+data = obj.intersection(nums1 = [4,9,5], nums2 = [9,4,9,8,4])
 print(data)
