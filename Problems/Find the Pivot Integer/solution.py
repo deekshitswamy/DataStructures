@@ -2,7 +2,8 @@ import io
 from typing import List
 class Solution:
     def pivotInteger(self, n: int) -> int:
-        pass
+        x = math.sqrt(n*(n+1)/2)
+        return int(x) if int(x) == x else -1
 
 obj = Solution()
 #data = obj.pivotInteger(n = 8)
