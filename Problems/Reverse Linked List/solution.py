@@ -7,7 +7,10 @@ class ListNode:
         self.next = next
 class Solution:
     def reverseList(self, head: ListNode) -> ListNode:
-        pass
+        prev=None
+        while head:
+            prev,head.next,head=head,prev,head.next
+        return prev
 
 obj = Solution()
 #data = obj.reverseList(head = [1,2,3,4,5])
