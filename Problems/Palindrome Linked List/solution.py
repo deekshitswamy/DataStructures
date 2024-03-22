@@ -10,7 +10,6 @@ class Solution:
         pass
 
 obj = Solution()
-#data = obj.testfunc(n = 1)
-#data = obj.testfunc(n = 2)
-data = obj.testfunc(n = 2)
+#data = obj.testfunc(head = [1,2,2,1])
+data = obj.testfunc(head = [1,2])
 print(data)
