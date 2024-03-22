@@ -7,9 +7,25 @@ class ListNode:
         self.next = next
 class Solution:
     def isPalindrome(self, head: ListNode) -> bool:
-        pass
+        slow,fast=head,head
+        while fast and fast.next:
+            slow=slow.next
+            fast=fast.next.next
+        prev=None
+        while slow:
+            tmp=slow.next
+            slow.next=prev
+            prev=slow
+            slow=tmp
+        left,right=head,prev
+        while right:
+            if left.val!=right.val:
+                return False
+            left=left.next
+            right=right.next
+        return True
 
 obj = Solution()
-#data = obj.testfunc(head = [1,2,2,1])
-data = obj.testfunc(head = [1,2])
+#data = obj.isPalindrome(head = [1,2,2,1])
+data = obj.isPalindrome(head = [1,2])
 print(data)
