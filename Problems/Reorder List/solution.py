@@ -7,7 +7,19 @@ class ListNode:
         self.next = next
 class Solution:
     def reorderList(self, head: ListNode) -> None:
-        pass
+        q=deque()
+        p=head.next
+        while p:
+            q.append(p)
+            p=p.next
+        p=head
+        while len(q):
+            p.next=q.pop()
+            p=p.next
+            if len(q):
+                p.next=q.popleft()
+                p=p.next
+        p.next=None
 
 obj = Solution()
 #data = obj.reorderList(head = [1,2,3,4])
