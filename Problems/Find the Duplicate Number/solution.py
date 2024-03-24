@@ -2,19 +2,14 @@ import io
 from typing import List
 class Solution:
     def findDuplicate(self, nums: List[int]) -> int:
-        slow,fast=0,0
-        while True:
-            slow=nums[slow]
-            fast=nums[nums[fast]]
-            if slow==fast:
-                break
+        n=len(nums)
+        freq=[0]*n
 
-        slow2=0
-        while True:
-            slow=nums[slow]
-            slow2=nums[slow2]
-            if slow==slow2:
-                return slow 
+        for i in range(n):
+            if freq[nums[i]]==0:
+                freq[nums[i]]+=1
+            else:
+                return nums[i]
 
 obj = Solution()
 #data = obj.findDuplicate(nums = [1,3,4,2,2])
