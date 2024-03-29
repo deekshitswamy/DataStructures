@@ -1,5 +1,6 @@
 import io
 from typing import List
+from collections import Counter
 class Solution:
     def countSubarrays(self, nums: List[int], k: int) -> int:
         max_num=max(nums)
