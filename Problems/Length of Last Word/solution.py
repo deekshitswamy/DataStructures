@@ -2,7 +2,14 @@ import io
 from typing import List
 class Solution:
     def lengthOfLastWord(self, s: str) -> int:
-        pass
+        i=len(s)-1
+        length=0
+        while s[i]==" ":
+            i-=1
+        while i>=0 and s[i]!=" ":
+            length+=1
+            i-=1
+        return length
 
 obj = Solution()
 #data = obj.lengthOfLastWord(s = "Hello World")
