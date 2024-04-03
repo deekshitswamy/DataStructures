@@ -1,5 +1,6 @@
 import io
 from typing import List
+from collections import Counter
 class Solution:
     def exist(self, board: List[List[str]], word: str) -> bool:
         row=len(board)
