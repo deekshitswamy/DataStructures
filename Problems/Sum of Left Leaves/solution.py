@@ -12,7 +12,6 @@ class Solution:
         pass
 
 obj = Solution()
-#data = obj.sumOfLeftLeaves(n = 1)
-#data = obj.sumOfLeftLeaves(n = 2)
-data = obj.sumOfLeftLeaves(n = 2)
+#data = obj.sumOfLeftLeaves(root = [3,9,20,null,null,15,7])
+data = obj.sumOfLeftLeaves(root = [1])
 print(data)
