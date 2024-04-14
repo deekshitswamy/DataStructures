@@ -9,7 +9,20 @@ class TreeNode:
 
 class Solution:
     def sumOfLeftLeaves(self, root: TreeNode) -> int:
-        pass
+        self.total=0
+        
+        def dfs(node,left):
+            if not node:
+                return 
+            
+            dfs(node.left,True)
+            dfs(node.right,False)
+            
+            if not node.left and not node.right and left:
+                self.total+=node.val
+                
+        dfs(root,False)
+        return self.total
 
 obj = Solution()
 #data = obj.sumOfLeftLeaves(root = [3,9,20,null,null,15,7])
