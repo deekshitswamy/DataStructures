@@ -2,7 +2,22 @@ import io
 from typing import List
 class Solution:
     def validPath(self, n: int, edges: List[List[int]], source: int, destination: int) -> bool:
-        pass
+        adj=defaultdict(list)
+        for u,v in edges:
+            adj[u].append(v)
+            adj[v].append(u)
+        visited=set()
+
+        def dfs(root):
+            if root==destination:
+                return True
+            else:
+                visited.add(root)
+                for i in adj[root]:
+                    if i not in visited and dfs(i):
+                        return True 
+                return False
+        return dfs(source)
 
 obj = Solution()
 #data = obj.validPath(n = 3, edges = [[0,1],[1,2],[2,0]], source = 0, destination = 2)
