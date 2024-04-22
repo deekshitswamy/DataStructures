@@ -1,5 +1,6 @@
 import io
 from typing import List
+from collections import deque
 class Solution:
     def openLock(self, deadends: List[str], target: str) -> int:
         deadends=set(deadends)
