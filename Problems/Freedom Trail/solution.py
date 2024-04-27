@@ -1,5 +1,6 @@
 import io
 from typing import List
+import collections
 class Solution:
     def findRotateSteps(self, ring: str, key: str) -> int:
         table=collections.defaultdict(list)
