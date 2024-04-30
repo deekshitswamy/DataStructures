@@ -1,4 +1,5 @@
 import io
+import collections
 from typing import List
 class Solution:
     def wonderfulSubstrings(self, word: str) -> int:
