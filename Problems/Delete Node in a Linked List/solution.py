@@ -12,7 +12,8 @@ class Solution:
         :type node: ListNode
         :rtype: void Do not return anything, modify node in-place instead.
         """
-        pass
+        node.val = node.next.val
+        node.next = node.next.next
 
 obj = Solution()
 #data = obj.deleteNode(head = [4,5,1,9], node = 5)
