@@ -18,7 +18,6 @@ class Solution:
         return head
 
 obj = Solution()
-#data = obj.testfunc(n = 1)
-#data = obj.testfunc(n = 2)
-data = obj.testfunc(n = 2)
+#data = obj.doubleIt(head = [1,8,9])
+data = obj.doubleIt(head = [9,9,9])
 print(data)
