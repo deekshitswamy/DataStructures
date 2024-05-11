@@ -1,5 +1,7 @@
 import io
+from math import inf
 from typing import List
+from heapq import heappop, heappush
 class Solution:
     def mincostToHireWorkers(self, quality: List[int], wage: List[int], k: int) -> float:
         ans=inf
