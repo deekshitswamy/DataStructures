@@ -1,4 +1,5 @@
 import io
+import itertools
 from typing import List
 class Solution:
     def getMaximumGold(self, grid: List[List[int]]) -> int:
