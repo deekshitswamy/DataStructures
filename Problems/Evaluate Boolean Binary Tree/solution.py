@@ -9,7 +9,19 @@ class TreeNode:
 
 class Solution:
     def evaluateTree(self, root: TreeNode) -> bool:
-        pass
+        def go(node):
+            if node is None:
+                return True
+            if node.left is None and node.right is None:
+                if node.val==0:
+                    return False
+                else:
+                    return True
+            if node.val==2:
+                return go(node.left)  or go(node.right)
+            else:
+                return go(node.left) and go(node.right)
+        return go(root) 
 
 obj = Solution()
 #data = obj.evaluateTree(root = [2,1,3,null,null,0,1])
