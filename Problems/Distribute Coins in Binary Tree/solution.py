@@ -9,7 +9,15 @@ class TreeNode:
 
 class Solution:
     def distributeCoins(self, root: TreeNode) -> int:
-        pass
+        self.moves = 0
+        def dfs(root):
+            if not root: return 0
+            l, r = dfs(root.left), dfs(root.right)
+            extraCoins = (root.val - 1) + l + r
+            self.moves += abs(extraCoins)
+            return extraCoins
+        dfs(root)
+        return self.moves
 
 obj = Solution()
 #data = obj.distributeCoins(root = [3,0,0])
