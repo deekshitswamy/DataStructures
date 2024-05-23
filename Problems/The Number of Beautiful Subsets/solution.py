@@ -2,7 +2,11 @@ import io
 from typing import List
 class Solution:
     def beautifulSubsets(self, n: int) -> int:
-        pass
+        count=Counter(nums)
+        def dp(num):
+            dp0,dp1=dp(num-k) if num-k in count else (1,0)
+            return dp0+dp1, dp0*(pow(2,count[num])-1)
+        return reduce(mul,(sum(dp(num)) for num in count if not count[num+k]  ))-1
 
 obj = Solution()
 #data = obj.beautifulSubsets(nums = [2,4,6], k = 2)
