@@ -1,7 +1,9 @@
 import io
-from typing import List
+from operator import mul
+from functools import reduce
+from typing import Counter, List
 class Solution:
-    def beautifulSubsets(self, n: int) -> int:
+    def beautifulSubsets(self, nums: List[int], k: int) -> int:
         count=Counter(nums)
         def dp(num):
             dp0,dp1=dp(num-k) if num-k in count else (1,0)
