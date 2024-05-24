@@ -2,7 +2,19 @@ import io
 from typing import List
 class Solution:
     def maxScoreWords(self, words: List[str], letters: List[str], score: List[int]) -> int:
-        pass
+        def dp(n,letter):
+            ans=0
+            if n==len(words):
+                return 0
+            ans=0
+            m=letter
+            for i in words[n]:
+                if i not in m:
+                    return dp(n+1,letter)
+                m=m.replace(i,'',1)
+                ans+=score[ord(i)-97]
+            return max(dp(n+1,letter),ans+dp(n+1,m))
+        return dp(0,''.join(letters))
 
 obj = Solution()
 #data = obj.maxScoreWords(words = ["dog","cat","dad","good"], letters = ["a","a","c","d","d","d","g","o","o"], score = [1,0,9,5,0,0,3,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0])
