@@ -1,5 +1,6 @@
 import io
 from typing import List
+from collections import defaultdict
 class Solution:
     def specialArray(self, nums: List[int]) -> int:
         greater_number_count = defaultdict(int)
