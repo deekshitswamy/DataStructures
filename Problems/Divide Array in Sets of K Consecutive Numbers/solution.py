@@ -1,5 +1,6 @@
 import io
 from typing import List
+from collections import Counter
 class Solution:
     def isPossibleDivide(self, nums: List[int], k: int) -> bool:
         if len(nums) % k != 0:
