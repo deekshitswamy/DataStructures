@@ -5,7 +5,6 @@ class Solution:
         pass
 
 obj = Solution()
-#data = obj.testfunc(n = 1)
-#data = obj.testfunc(n = 2)
-data = obj.testfunc(n = 2)
+#data = obj.sortColors(nums = [2,0,2,1,1,0])
+data = obj.sortColors(nums = [2,0,1])
 print(data)
