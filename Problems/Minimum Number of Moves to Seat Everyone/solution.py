@@ -2,7 +2,13 @@ import io
 from typing import List
 class Solution:
     def minMovesToSeat(self, seats: List[int], students: List[int]) -> int:
-        pass
+        seats.sort()
+        students.sort()
+        n=len(seats)
+        ans=0
+        for i in range(n):
+            ans+=abs(seats[i]-students[i])
+        return ans
 
 obj = Solution()
 #data = obj.minMovesToSeat(seats = [3,1,5], students = [2,7,4])
