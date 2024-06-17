@@ -2,7 +2,12 @@ import io
 from typing import List
 class Solution:
     def judgeSquareSum(self, c: int) -> bool:
-        pass
+        s=set()
+        for i in range( 0, floor(math.sqrt(c)+1)):
+            s.add(i*i)
+            if  c-i*i in s or 2*i*i==c:
+                return True
+        return False
 
 obj = Solution()
 #data = obj.judgeSquareSum(c = 5)
