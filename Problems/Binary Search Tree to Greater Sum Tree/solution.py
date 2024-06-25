@@ -9,7 +9,17 @@ class TreeNode:
 
 class Solution:
     def bstToGst(self, root: TreeNode) -> TreeNode:
-        pass
+        ans=0
+        def helper(node):
+            nonlocal ans
+            if node==None:
+                return
+            helper(node.right)
+            ans+=node.val
+            node.val=ans
+            helper(node.left)
+        helper(root)  
+        return root
 
 obj = Solution()
 #data = obj.bstToGst(root = [4,1,6,0,2,5,7,None,None,None,3,None,None,None,8])
