@@ -8,7 +8,24 @@ class TreeNode:
         self.right = right
 class Solution:
     def balanceBST(self, root: TreeNode) -> TreeNode:
-        pass
+        ans=[]
+        def dfs(node):
+            if not node:
+                return None
+            dfs(node.left)
+            ans.append(node.val)
+            dfs(node.right)
+
+        dfs(root)
+        def tree(low,high):
+            if low>high:
+                return None
+            mid=(low+high)//2
+            root=TreeNode(ans[mid])
+            root.left=tree(low,mid-1)
+            root.right=tree(mid+1,high)
+            return root
+        return tree(0,len(ans)-1) 
 
 obj = Solution()
 #data = obj.balanceBST(root = [1,None,2,None,3,None,4,None,None])
