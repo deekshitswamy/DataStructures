@@ -2,7 +2,11 @@ import io
 from typing import List
 class Solution:
     def threeConsecutiveOdds(self, arr: List[int]) -> bool:
-        pass
+        n=len(arr)
+        for i in range(n):
+            if i+2<n and arr[i]%2==1 and arr[i+1]%2==1 and arr[i+2]%2==1:
+                return True
+        return False
 
 obj = Solution()
 #data = obj.threeConsecutiveOdds(arr = [2,6,4,1])
