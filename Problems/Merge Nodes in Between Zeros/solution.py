@@ -8,7 +8,18 @@ class ListNode:
 
 class Solution:
     def mergeNodes(self, head: ListNode) -> ListNode:
-        pass
+        arr=[]
+        cur=head
+        while cur!=None:
+            arr.append(cur.val)
+            cur=cur.next
+        newHead=ListNode(-1)
+        cur=newHead
+        for x,t in groupby(arr,key=lambda x: x==0):
+            if not x:
+                cur.next=ListNode(sum(t))  
+                cur=cur.next
+        return newHead.next
 
 obj = Solution()
 #data = obj.mergeNodes(head = [0,3,1,0,4,5,2,0])
