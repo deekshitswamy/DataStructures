@@ -2,7 +2,7 @@ import io
 from typing import List
 class Solution:
     def numWaterBottles(numBottles: int, numExchange: int) -> int:
-        pass
+        return int(numBottles+(numBottles-1)/(numExchange-1))
 
 obj = Solution()
 #data = obj.numWaterBottles(numBottles = 9, numExchange = 3)
