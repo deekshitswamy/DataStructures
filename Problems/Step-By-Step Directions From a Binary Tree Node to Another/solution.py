@@ -12,8 +12,8 @@ class Solution:
         self.path_array = [''] * 100001
         self.start_ptr = 0
         self.end_ptr = 100000
-        self.origin = origin
-        self.destination = destination
+        self.origin = startValue
+        self.destination = destValue
         
         self.traverse_tree(root)
         
