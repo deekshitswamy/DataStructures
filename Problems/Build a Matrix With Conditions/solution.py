@@ -1,30 +1,8 @@
 import io
 from typing import List
+from collections import defaultdict
 class Solution:
     def buildMatrix(self, k: int, rowConditions: List[List[int]], colConditions: List[List[int]]) -> List[List[int]]:
-        
-        def topo_sort(queue,res,adj_list,indegree):
-            while queue:
-                curr = queue.pop(0)
-                res.append(curr)
-                for i in adj_list[curr]:
-                    indegree[i]-=1
-                    if indegree[i]==0:
-                        queue.append(i)
-            return res
-        Row = topo_sort(queue1,[],adj_l_A,indegree_A)
-        Col = topo_sort(queue2,[],adj_l_B,indegree_B)
-        if len(Row)==k and len(Col)==k:
-            grid = [[0 for i in range(k)] for j in range(k)]
-            ind = {}
-            for i in range(k):
-                ind[Col[i]] = i
-            for i in range(k):
-                j = ind[Row[i]]
-                grid[i][j] = Row[i]
-            return grid
-        return []
-
         def topo(a):
             res = []
             q = []
@@ -62,7 +40,28 @@ class Solution:
 
         for num,[row,col] in pos.items():
             res[row][col] = num
-        return res
+        return res    
+        # def topo_sort(queue,res,adj_list,indegree):
+        #     while queue:
+        #         curr = queue.pop(0)
+        #         res.append(curr)
+        #         for i in adj_list[curr]:
+        #             indegree[i]-=1
+        #             if indegree[i]==0:
+        #                 queue.append(i)
+        #     return res
+        # Row = topo_sort(queue1,[],adj_l_A,indegree_A)
+        # Col = topo_sort(queue2,[],adj_l_B,indegree_B)
+        # if len(Row)==k and len(Col)==k:
+        #     grid = [[0 for i in range(k)] for j in range(k)]
+        #     ind = {}
+        #     for i in range(k):
+        #         ind[Col[i]] = i
+        #     for i in range(k):
+        #         j = ind[Row[i]]
+        #         grid[i][j] = Row[i]
+        #     return grid
+        # return []
 
 obj = Solution()
 #data = obj.buildMatrix(k = 3, rowConditions = [[1,2],[3,2]], colConditions = [[2,1],[3,2]])
