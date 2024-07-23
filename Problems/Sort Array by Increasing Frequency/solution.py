@@ -2,7 +2,9 @@ import io
 from typing import List
 class Solution:
     def frequencySort(self, nums: List[int]) -> List[int]:
-        pass
+        num_frequency = Counter(nums)
+        sorted_nums = sorted(nums, key=lambda x: (num_frequency[x], -x))
+        return sorted_nums
 
 obj = Solution()
 #data = obj.frequencySort(nums = [1,1,2,2,2,3])
