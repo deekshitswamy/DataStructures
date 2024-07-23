@@ -1,5 +1,6 @@
 import io
 from typing import List
+from collections import Counter
 class Solution:
     def frequencySort(self, nums: List[int]) -> List[int]:
         num_frequency = Counter(nums)
