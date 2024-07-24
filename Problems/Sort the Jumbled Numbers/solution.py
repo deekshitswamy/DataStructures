@@ -2,7 +2,14 @@ import io
 from typing import List
 class Solution:
     def sortJumbled(self, mapping: List[int], nums: List[int]) -> List[int]:
-        pass
+        def mySort(ele):
+            s = str(ele)
+            num = 0
+            for c in s:
+                num = 10*num + (mapping[ord(c) - ord('0')])
+            return num
+        
+        return sorted(nums, key = mySort)
 
 obj = Solution()
 #data = obj.sortJumbled(mapping = [8,9,4,0,2,1,3,5,7,6], nums = [991,338,38])
