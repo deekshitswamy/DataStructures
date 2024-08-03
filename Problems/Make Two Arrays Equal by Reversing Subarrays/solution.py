@@ -1,5 +1,5 @@
 import io
-from typing import List
+from typing import Counter, List
 class Solution:
     def canBeEqual(self, target: List[int], arr: List[int]) -> bool:
         mp = Counter(target)
