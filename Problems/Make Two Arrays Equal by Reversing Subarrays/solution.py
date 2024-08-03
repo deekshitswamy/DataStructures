@@ -2,7 +2,10 @@ import io
 from typing import List
 class Solution:
     def canBeEqual(self, target: List[int], arr: List[int]) -> bool:
-        pass
+        mp = Counter(target)
+        mp2 = Counter(arr)
+    
+        return mp == mp2
 
 obj = Solution()
 #data = obj.canBeEqual(target = [1,2,3,4], arr = [2,4,1,3])
