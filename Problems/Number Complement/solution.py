@@ -22,7 +22,7 @@ class Solution:
         n = len(binary)
 
 obj = Solution()
-#data = obj.findComplement(n = 1)
-#data = obj.findComplement(n = 2)
-data = obj.findComplement(n = 2)
+#data = obj.findComplement(num = 1)
+#data = obj.findComplement(num = 2)
+data = obj.findComplement(num = 5)
 print(data)
