@@ -8,7 +8,16 @@ class TreeNode:
 
 class Solution:
     def postorderTraversal(self, root: TreeNode) -> List[int]:
-        pass
+        def find(root, ans):
+            if not root:
+                return
+            find(root.left, ans)
+            find(root.right, ans)
+            ans.append(root.val)
+        
+        ans = []
+        find(root, ans)
+        return ans
 
 obj = Solution()
 #data = obj.postorderTraversal(root = [1,None,2,3])
