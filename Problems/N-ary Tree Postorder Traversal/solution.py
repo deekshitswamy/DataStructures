@@ -8,8 +8,18 @@ class Node:
         self.children = children
 
 class Solution:
-    def postorder(self, root: Node) -> List[int]:
-        pass
+    def __init__(self):
+        self.result = []
+
+    def postorder(self, root: 'Node') -> List[int]:
+        if not root:
+            return self.result
+        
+        for child in root.children:
+            self.postorder(child)
+        self.result.append(root.val)
+        
+        return self.result
 
 obj = Solution()
 #data = obj.postorder(root = [1,None,3,2,4,None,5,6])
