@@ -7,7 +7,15 @@ class ListNode:
         self.next = next
 class Solution:
     def insertGreatestCommonDivisors(self, head: ListNode) -> ListNode:
-        pass
+        if not head.next:
+            return head
+        temp = head
+        while temp.next:
+            new = ListNode(gcd(tmp.val, temp.next.val))
+            new.next = temp.next
+            temp.next = new
+            temp = new.next
+        return head
 
 obj = Solution()
 #data = obj.insertGreatestCommonDivisors(head = [18,6,10,3])
