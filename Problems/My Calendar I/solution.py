@@ -3,11 +3,14 @@ from typing import List
 class MyCalendar:
 
     def __init__(self):
-        pass
-        
+        self.booked = []
 
     def book(self, start: int, end: int) -> bool:
-        pass
+        for b in self.booked:
+            if max(b[0], start) < min(b[1], end):
+                return False
+        self.booked.append([start, end])
+        return True
 
 # ["MyCalendar", "book", "book", "book"]
 # [[], [10, 20], [15, 25], [20, 30]]
