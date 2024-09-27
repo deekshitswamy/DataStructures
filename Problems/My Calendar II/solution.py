@@ -20,6 +20,15 @@ class MyCalendarTwo:
         self.cal.append([start, end])
         return True
 
+'''
+Input
+["MyCalendarTwo", "book", "book", "book", "book", "book", "book"]
+[[], [10, 20], [50, 60], [10, 40], [5, 15], [5, 10], [25, 55]]
+
+Output
+[null, true, true, true, false, true, true]
+'''
+
 obj = MyCalendarTwo()
 #data = obj.book(10, 20)
 #data = obj.book(50, 60)
