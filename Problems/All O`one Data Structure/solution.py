@@ -3,19 +3,36 @@ from typing import List
 class AllOne:
 
     def __init__(self):
-        pass
+        self.d = defaultdict(int)
+        self.high = []
+        self.low = []
 
     def inc(self, key: str) -> None:
-        pass
+        self.d[key]+=1
+        heapq.heappush(self.low,(self.d[key],key))
+        heapq.heappush(self.high,(-self.d[key],key))
 
     def dec(self, key: str) -> None:
-        pass
+        self.d[key]-=1
+        if self.d[key]:
+            heapq.heappush(self.low,(self.d[key],key))
+            heapq.heappush(self.high,(-self.d[key],key))
 
     def getMaxKey(self) -> str:
-        pass
+        while self.high:
+            a,k = heapq.heappop(self.high)
+            if self.d[k] == -a:
+                heapq.heappush(self.high,(a,k))
+                return k
+        return ""
 
     def getMinKey(self) -> str:
-        pass
+        while self.low:
+            a,k = heapq.heappop(self.low)
+            if self.d[k] == a:
+                heapq.heappush(self.low,(a,k))
+                return k
+        return ""
         
 
 
