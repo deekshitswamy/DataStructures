@@ -1,5 +1,7 @@
 import io
+import heapq
 from typing import List
+from collections import defaultdict
 class AllOne:
 
     def __init__(self):
