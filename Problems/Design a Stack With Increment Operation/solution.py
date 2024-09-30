@@ -2,18 +2,19 @@ import io
 from typing import List
 class CustomStack:
 
-    def __init__(self, maxSize: int):
-        pass
-        
+    def __init__(self, n: int):
+        self.n, self.stack, self.inc = n, [], []
 
     def push(self, x: int) -> None:
-        pass
+        if len(self.stack) < self.n: self.stack.append(x), self.inc.append(0)
 
     def pop(self) -> int:
-        pass
+        if not self.stack: return -1
+        if len(self.inc) > 1: self.inc[-2] += self.inc[-1]
+        return self.stack.pop() + self.inc.pop()
 
     def increment(self, k: int, val: int) -> None:
-        pass
+        if self.inc: self.inc[min(k, len(self.inc)) - 1] += val
 
 
 # Your CustomStack object will be instantiated and called as such:
