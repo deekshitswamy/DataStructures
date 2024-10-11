@@ -1,5 +1,6 @@
 import io
 from typing import List
+from heapq import heappop, heappush
 class Solution:
     def smallestChair(self, times: List[List[int]], targetFriend: int) -> int:
         n = len(times)
