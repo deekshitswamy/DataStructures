@@ -1,30 +1,31 @@
-from heapq import heappop, heappush
 import io
+import math
 from typing import List
+from heapq import heappop, heappush
 class Solution:
     def smallestRange(self, nums: List[List[int]]) -> List[int]:
-        n = len(nums)
-        pq = []
-        ma = 0
-        
+        n=len(nums)
+        hp=[]
+        maxx=-math.inf
+        min_range=math.inf
         for i in range(n):
-            heappush(pq, (nums[i][0] , i, 0))
-            ma = max(ma , nums[i][0])
-        
-        ans = [pq[0][0] , ma]
-        while True:
-            _,i,j = heappop(pq)
-
-            if j == len(nums[i])-1:
+            # we push the value, index in terms of nums and the sub index 
+            heappush(hp,(nums[i][0],i,0))
+            if maxx<nums[i][0]:
+                maxx=nums[i][0]
+        res=[math.inf, -math.inf]
+        while hp:
+            min_val,idx,sub_idx=heappop(hp)
+            if maxx-min_val<min_range:
+                min_range=maxx-min_val
+                res=[maxx,min_val]
+            if sub_idx+1<len(nums[idx]):
+                heappush(hp,(nums[idx][sub_idx+1],idx,sub_idx+1))
+                if maxx<nums[idx][sub_idx+1]:
+                    maxx=nums[idx][sub_idx+1]
+            else:
                 break
-                
-            next_num = nums[i][j+1]
-            ma = max( ma , next_num)
-            heappush(pq,(next_num, i , j+1))
-            
-            if ma-pq[0][0] < ans[1] - ans[0]:
-                ans= [pq[0][0], ma]
-        return ans
+        return res
 
 obj = Solution()
 #data = obj.smallestRange(nums = [[4,10,15,24,26],[0,9,12,20],[5,18,22,30]])
