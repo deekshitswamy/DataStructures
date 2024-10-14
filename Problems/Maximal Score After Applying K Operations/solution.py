@@ -5,7 +5,6 @@ class Solution:
         pass
 
 obj = Solution()
-#data = obj.maxKelements(n = 1)
-#data = obj.maxKelements(n = 2)
-data = obj.maxKelements(n = 2)
+#data = obj.maxKelements(nums = [10,10,10,10,10], k = 5)
+data = obj.maxKelements(nums = [1,10,3,3,3], k = 3)
 print(data)
