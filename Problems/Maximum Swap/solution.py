@@ -5,7 +5,6 @@ class Solution:
         pass
 
 obj = Solution()
-#data = obj.maximumSwap(n = 1)
-#data = obj.maximumSwap(n = 2)
-data = obj.maximumSwap(n = 2)
+#data = obj.maximumSwap(num = 2736)
+data = obj.maximumSwap(num = 9973)
 print(data)
