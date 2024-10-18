@@ -1,5 +1,5 @@
 import io
-from typing import List
+from typing import Counter, List
 class Solution:
     def countMaxOrSubsets(self, nums: List[int]) -> int:
         pool = Counter()
