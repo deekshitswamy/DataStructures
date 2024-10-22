@@ -10,30 +10,32 @@ class TreeNode:
 
 class Solution:
     def kthLargestLevelSum(self, root: TreeNode, k: int) -> int:
-        max_heap = []
-    
-        def dfs(childArr):
-            if not childArr:
-                return
-            sum_val = 0
-            nextChildArr = []
-            for child in childArr:
-                sum_val += child.val
-                if child.left:
-                    nextChildArr.append(child.left)
-                if child.right:
-                    nextChildArr.append(child.right)
-            heapq.heappush(max_heap, -sum_val)  # Using a min-heap with negative values to simulate max-heap
-            dfs(nextChildArr)
-        
-        dfs([root])
-        
-        top = -1
-        while k:
-            top = -heapq.heappop(max_heap)
-            k -= 1
-            
-        return top if top != -1 else -1
+        levelSum = [root.val]
+        currentLevel = [root]
+        nxtLevel = []
+        if root.left is not None:
+            nxtLevel.append(root.left)
+        if root.right is not None:
+            nxtLevel.append(root.right)
+
+
+        while len(nxtLevel) != 0:
+            currentLevel = nxtLevel[:]
+            nxtLevel = []
+
+            for node in currentLevel:
+                if node.left is not None:
+                    nxtLevel.append(node.left)
+                if node.right is not None:
+                    nxtLevel.append(node.right)
+
+            levelSum.append(sum([n.val for n in currentLevel]))
+
+        if len(levelSum) < k:
+            return -1
+
+        levelSum.sort()
+        return levelSum[-k]
 
 obj = Solution()
 #data = obj.kthLargestLevelSum(root = [5,8,9,2,1,3,7,4,6], k = 2)
