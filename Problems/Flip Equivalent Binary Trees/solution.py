@@ -6,6 +6,7 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right
+        
 class Solution:
     def flipEquiv(self, root1: TreeNode, root2: TreeNode) -> bool:
         # If both nodes are None, trees are equivalent.
