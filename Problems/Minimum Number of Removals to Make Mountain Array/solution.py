@@ -1,5 +1,6 @@
 import io
 from typing import List
+from bisect import bisect_left
 class Solution:
     def minimumMountainRemovals(self, nums: List[int]) -> int:
         size = len(nums)
