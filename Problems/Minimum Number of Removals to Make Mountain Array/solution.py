@@ -5,6 +5,7 @@ class Solution:
         pass
 
 obj = Solution()
+
 #data = obj.minimumMountainRemovals(nums = [1,3,1])
 data = obj.minimumMountainRemovals(nums = [2,1,1,5,6,2,3,1])
 print(data)
