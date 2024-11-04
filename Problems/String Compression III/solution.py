@@ -1,5 +1,6 @@
 import io
 from typing import List
+from collections import defaultdict
 class Solution:
     def compressedString(self, word: str) -> str:
         dic = defaultdict(int)
