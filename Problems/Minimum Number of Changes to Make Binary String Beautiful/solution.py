@@ -2,7 +2,12 @@ import io
 from typing import List
 class Solution:
     def minChanges(self, s: str) -> int:
-        pass
+        n = len(s) 
+        c= 0
+        for i in range(0,n,2):
+            if s[i]!=s[i+1]:
+                c+=1
+        return c
 
 obj = Solution()
 #data = obj.minChanges(s = "1001")
