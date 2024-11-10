@@ -1,5 +1,5 @@
 import io
-from collections import deque
+from collections import Counter
 from typing import List
 class Solution:
     def minimumSubarrayLength(self, nums: List[int], k: int) -> int:
