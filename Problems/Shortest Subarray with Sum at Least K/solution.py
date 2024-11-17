@@ -1,5 +1,6 @@
 import io
 from typing import List
+from collections import deque
 class Solution:
     def shortestSubarray(self, nums: List[int], k: int) -> int:
         n = len(nums)
