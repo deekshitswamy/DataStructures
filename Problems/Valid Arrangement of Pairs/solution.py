@@ -1,5 +1,6 @@
 import io
 from typing import List
+from collections import defaultdict
 class Solution:
     def validArrangement(self, pairs: List[List[int]]) -> List[List[int]]:
         g = defaultdict(list)
