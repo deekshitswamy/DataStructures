@@ -1,5 +1,6 @@
 import io
 from typing import List
+from collections import defaultdict
 class Solution:
     def minimumDiameterAfterMerge(self, edges1: List[List[int]], edges2: List[List[int]]) -> int:
         def getDiameter(edges):
