@@ -10,16 +10,22 @@ from typing import List
 
 class Solution:
     def largestValues(self, root: List[int]) -> List[int]:
-        if not root: return []
-        a, depth = {}, 0
-        stack = [(root, depth)]
-        while stack:
-            node, depth = stack.pop()
-            if depth in a and a[depth] < node.val: a[depth] = node.val
-            if depth not in a: a[depth] = node.val
-            if node.left: stack.append((node.left, 1 + depth))
-            if node.right: stack.append((node.right, 1 + depth))
-        return a.values()
+        answer = {}
+        
+        def dfs(root, level):
+            if root:
+                # Update the maximum value for the current level
+                if level in answer:
+                    answer[level] = max(answer[level], root.val)
+                else:
+                    answer[level] = root.val
+                # Traverse the left and right children
+                dfs(root.left, level + 1)
+                dfs(root.right, level + 1)
+        
+        dfs(root, 0)
+        # Return the values in the order they were filled
+        return list(answer.values())
 
 obj = Solution()
 #data = obj.largestValues(root = [1,3,2,5,3,null,9])
