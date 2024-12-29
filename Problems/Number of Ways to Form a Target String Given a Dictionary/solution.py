@@ -1,5 +1,6 @@
 import io
 from typing import List
+from collections import Counter
 class Solution:
     def numWays(self, words: List[str], target: str) -> int:
         M = 10 ** 9 + 7
