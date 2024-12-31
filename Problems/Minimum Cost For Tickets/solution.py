@@ -4,7 +4,6 @@ class Solution:
     def mincostTickets(self, days: List[int], costs: List[int]) -> int:
         a, b, c = costs
         dp = {}
-
         def dfs(i):
             if i in dp:
                 return dp[i]
