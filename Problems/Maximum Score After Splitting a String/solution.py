@@ -8,4 +8,5 @@ obj = Solution()
 #data = obj.maxScore(s = "011101")
 #data = obj.maxScore(s = "00111")
 data = obj.maxScore(s = "1111")
+
 print(data)
