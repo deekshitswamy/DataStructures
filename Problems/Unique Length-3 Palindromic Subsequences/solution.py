@@ -14,6 +14,7 @@ class Solution:
                         u.add(s[index])
                     ans+=len(u)
         return ans
+    
 
 obj = Solution()
 #data = obj.countPalindromicSubsequence(s = "aabca")
