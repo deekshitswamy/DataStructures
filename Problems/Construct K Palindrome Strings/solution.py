@@ -1,5 +1,5 @@
 import io
-from typing import List
+from typing import Counter, List
 class Solution:
     def canConstruct(self, s: str, k: int) -> bool:
         freq = Counter(s)
