@@ -1,5 +1,6 @@
 import io
 from typing import List
+from collections import Counter
 class Solution:
     def minimumLength(self, s: str) -> int:
         char_counts = Counter(s)
