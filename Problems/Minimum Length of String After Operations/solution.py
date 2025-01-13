@@ -2,7 +2,9 @@ import io
 from typing import List
 class Solution:
     def minimumLength(self, s: str) -> int:
-        pass
+        char_counts = Counter(s)
+        min_length = sum(1 if count % 2 else 2 for count in char_counts.values())
+        return min_length
 
 obj = Solution()
 #data = obj.minimumLength(s = "abaacbcbb")
