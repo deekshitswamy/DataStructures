@@ -1,5 +1,6 @@
 import io
 from typing import List
+from collections import deque
 class Solution:
     def minCost(self, grid: List[List[int]]) -> int:
         directions = {
