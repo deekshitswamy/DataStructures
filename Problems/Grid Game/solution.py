@@ -2,7 +2,12 @@ import io
 from typing import List
 class Solution:
     def gridGame(self, grid: List[List[int]]) -> int:
-        pass
+        suffix, prefix, ans = sum(grid[0]), 0, inf
+        for n1, n2 in zip(*grid):
+            suffix -= n1
+            ans = min(max(suffix, prefix), ans)
+            prefix += n2
+        return ans
 
 obj = Solution()
 #data = obj.gridGame(grid = [[2,5,4],[1,5,1]])
