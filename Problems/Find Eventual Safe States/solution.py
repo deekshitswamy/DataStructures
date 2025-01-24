@@ -22,6 +22,7 @@ class Solution:
                 ans.append(i)
 
         return ans
+    
 
 
 obj = Solution()
