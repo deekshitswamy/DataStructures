@@ -1,5 +1,6 @@
 import io
 from typing import List
+from collections import deque
 class Solution:
     def maximumInvitations(self, favorite: List[int]) -> int:
         n = len(favorite)
