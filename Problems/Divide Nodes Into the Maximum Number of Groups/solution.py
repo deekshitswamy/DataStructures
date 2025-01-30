@@ -1,5 +1,6 @@
 import io
 from typing import List
+from collections import defaultdict, deque
 class Solution:
     def magnificentSets(self, n: int, edges: List[List[int]]) -> int:
         g = [[] for _ in range(n)]
