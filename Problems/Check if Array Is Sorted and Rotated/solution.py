@@ -2,7 +2,13 @@ import io
 from typing import List
 class Solution:
     def check(self, nums: List[int]) -> bool:
-        pass
+        lst = sorted(nums)
+        for i in range(0, len(nums)):
+            if lst == nums:
+                return True
+            ele = lst.pop(-1)
+            lst.insert(0, ele)
+        return False
 
 obj = Solution()
 #data = obj.check(nums = [3,4,5,1,2])
