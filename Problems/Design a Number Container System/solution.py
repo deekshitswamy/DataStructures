@@ -3,15 +3,25 @@ from typing import List
 class NumberContainers:
 
     def __init__(self):
-        pass
-        
+        self.mpidx = {} 
+        self.mpele = {}  
 
-    def change(self, index: int, number: int) -> None:
-        pass
-        
+    def change(self, idx: int, ele: int) -> None:
+        if idx in self.mpidx:
+            old_ele = self.mpidx[idx]
+            self.mpele[old_ele].remove(idx)
+            if not self.mpele[old_ele]:
+                del self.mpele[old_ele]
 
-    def find(self, number: int) -> int:
-        pass
+        self.mpidx[idx] = ele
+        if ele not in self.mpele:
+            self.mpele[ele] = SortedList()
+        self.mpele[ele].add(idx)
+
+    def find(self,ele: int) -> int:
+        if ele in self.mpele and self.mpele[ele]:
+            return self.mpele[ele][0]
+        return -1
         
 
 
