@@ -15,7 +15,7 @@ class NumberContainers:
 
         self.mpidx[idx] = ele
         if ele not in self.mpele:
-            self.mpele[ele] = SortedList()
+            self.mpele[ele] = SortedList() # type: ignore
         self.mpele[ele].add(idx)
 
     def find(self,ele: int) -> int:
