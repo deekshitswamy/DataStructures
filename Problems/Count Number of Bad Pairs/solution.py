@@ -1,5 +1,6 @@
 import io
 from typing import List
+from collections import defaultdict
 class Solution:
     def countBadPairs(self, nums: List[int]) -> int:
         m = defaultdict(int)
