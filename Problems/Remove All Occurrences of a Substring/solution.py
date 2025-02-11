@@ -2,7 +2,9 @@ import io
 from typing import List
 class Solution:
     def removeOccurrences(self, s: str, part: str) -> str:
-        pass
+        while part in s:
+            s = s.replace(part, '', 1)
+        return s
 
 obj = Solution()
 #data = obj.removeOccurrences(s = "daabcbaabcbc", part = "abc")
