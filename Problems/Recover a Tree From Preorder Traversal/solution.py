@@ -9,7 +9,34 @@ class TreeNode:
 
 class Solution:
     def recoverFromPreorder(self, traversal: str) -> TreeNode:
-        pass
+        st = []
+        i = 0
+        while i < len(traversal):
+            depth = 0
+            while traversal[i] == '-':  
+                depth += 1
+                i += 1
+            
+            num = i
+            while i < len(traversal) and traversal[i].isdigit():  
+                i += 1
+            val = int(traversal[num:i])  
+
+            node = TreeNode(val)
+
+            while st and st[-1][1] >= depth:
+                st.pop()
+
+            if st:
+                parent = st[-1][0]
+                if parent.left == None:
+                    parent.left = node
+                else:
+                    parent.right = node
+            
+            st.append((node, depth))  
+
+        return st[0][0]
 
 obj = Solution()
 #data = obj.recoverFromPreorder(traversal = "1-2--3--4-5--6--7")
