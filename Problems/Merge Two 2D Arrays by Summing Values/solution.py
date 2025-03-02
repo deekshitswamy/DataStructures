@@ -5,7 +5,6 @@ class Solution:
         pass
 
 obj = Solution()
-#data = obj.mergeArrays(n = 1)
-#data = obj.mergeArrays(n = 2)
-data = obj.mergeArrays(n = 2)
+#data = obj.mergeArrays(nums1 = [[1,2],[2,3],[4,5]], nums2 = [[1,4],[3,2],[4,1]])
+data = obj.mergeArrays(nums1 = [[2,4],[3,6],[5,5]], nums2 = [[1,3],[4,3]])
 print(data)
