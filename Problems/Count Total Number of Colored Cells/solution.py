@@ -2,7 +2,7 @@ import io
 from typing import List
 class Solution:
     def coloredCells(self, n: int) -> int:
-        pass
+        return 1 + 2 * n * (n - 1)
 
 obj = Solution()
 #data = obj.coloredCells(n = 1)
