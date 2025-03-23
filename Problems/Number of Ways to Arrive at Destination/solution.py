@@ -1,0 +1,10 @@
+import io
+from typing import List
+class Solution:
+    def countPaths(self, n: int, roads: List[List[int]]) -> int:
+        pass
+
+obj = Solution()
+#data = obj.countPaths(n = 7, roads = [[0,6,7],[0,1,2],[1,2,3],[1,3,3],[6,3,3],[3,5,1],[6,5,1],[2,5,1],[0,4,5],[4,6,2]])
+data = obj.countPaths(n = 2, roads = [[1,0,10]])
+print(data)
