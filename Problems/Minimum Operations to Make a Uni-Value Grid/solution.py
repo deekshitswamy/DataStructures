@@ -1,5 +1,6 @@
 import io
 from typing import List
+from collections import Counter
 class Solution:
     def minOperations(self, grid: List[List[int]], x: int) -> int:
         c = Counter()
