@@ -2,7 +2,23 @@ import io
 from typing import List
 class Solution:
     def minimumIndex(self, nums: List[int]) -> int:
-        pass
+        n = len(nums)
+        freq = Counter(nums)
+        dom_term = 0
+        for k, v in freq.items():
+            if v > n / 2:
+                dom_term = k
+                break
+        
+        freq_dom_term = 0
+        for i, num in enumerate(nums):
+            if num == dom_term:
+                freq_dom_term += 1
+
+            if (i + 1) // 2 < freq_dom_term and (n - i - 1) // 2 < freq[dom_term] - freq_dom_term:
+                return i
+        
+        return -1
 
 obj = Solution()
 #data = obj.minimumIndex(nums = [1,2,2,2])
