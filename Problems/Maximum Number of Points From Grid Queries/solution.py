@@ -1,5 +1,8 @@
 import io
+import heapq
 from typing import List
+from bisect import bisect_left
+from collections import defaultdict
 class Solution:
     def maxPoints(self, grid: List[List[int]], queries: List[int]) -> List[int]:
         R = len(grid)
