@@ -2,7 +2,14 @@ import io
 from typing import List
 class Solution:
     def maximumTripletValue(self, nums: List[int]) -> int:
-        pass
+        leftMax = list(accumulate(nums, max))
+        rightMax = list(accumulate(reversed(nums), max))[::-1]
+        maxAns = 0
+
+        for i in range(1, len(nums) - 1):
+            maxAns = max(maxAns, (leftMax[i - 1] - nums[i]) * rightMax[i + 1])
+        
+        return maxAns
 
 obj = Solution()
 #data = obj.maximumTripletValue(nums = [12,6,1,2,7])
