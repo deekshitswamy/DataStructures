@@ -1,5 +1,6 @@
 import io
 from typing import List
+from itertools import accumulate
 class Solution:
     def maximumTripletValue(self, nums: List[int]) -> int:
         leftMax = list(accumulate(nums, max))
