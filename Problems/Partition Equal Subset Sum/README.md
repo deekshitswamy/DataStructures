@@ -1,4 +1,4 @@
-# 416. Partition Equal Subset Sum
+# 416. Partition Equal Subset Sum 
 
 Given an integer array `nums`, return `true` _if you can partition the array into two subsets such that the sum of the elements in both subsets is equal or_ `false` _otherwise_.
 
