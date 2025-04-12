@@ -1,5 +1,6 @@
 import io
 from typing import List
+from math import factorial
 class Solution:
     def countGoodIntegers(self, n: int, k: int) -> int:
         dictionary = set()
