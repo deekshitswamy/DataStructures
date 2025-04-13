@@ -1,4 +1,5 @@
 import io
+from math import ceil
 from typing import List
 class Solution:
     def countGoodNumbers(self, n: int) -> int:
