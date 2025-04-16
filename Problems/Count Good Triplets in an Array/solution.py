@@ -1,5 +1,6 @@
 import io
 from typing import List
+from sortedcontainers import SortedList
 class Solution:
     def goodTriplets(self, nums1: List[int], nums2: List[int]) -> int:
         res, index, arr = 0, [0] * len(nums1), SortedList()
