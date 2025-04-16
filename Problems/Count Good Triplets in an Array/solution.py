@@ -2,7 +2,12 @@ import io
 from typing import List
 class Solution:
     def goodTriplets(self, nums1: List[int], nums2: List[int]) -> int:
-        pass
+        res, index, arr = 0, [0] * len(nums1), SortedList()
+        for i,n in enumerate (nums1):   index[n] = i
+        for i,n in enumerate (nums2):   nums1[i] = index[n]
+        for i,n in enumerate (reversed(nums1)):
+            x = arr.bisect(n) ; arr.add(n) ; res += (i-x)*(n-x)
+        return res
 
 obj = Solution()
 #data = obj.goodTriplets(n = 1)
