@@ -1,5 +1,6 @@
 import io
 from typing import List
+from collections import defaultdict
 class Solution:
     def countPairs(self, nums: List[int], k: int) -> int:
         indices = defaultdict(list)
