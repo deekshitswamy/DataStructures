@@ -1,6 +1,6 @@
-# 2563. Count the Number of Fair Pairs
+# 2563. Count the Number of Fair Pairs 
 
-Given a **0-indexed** integer array `nums` of size `n` and two integers `lower` and `upper`, return *the number of fair pairs*.
+Given a **0-indexed** integer array `nums` of size `n` and two integers `lower` and `upper`, return _the number of fair pairs_.
 
 A pair `(i, j)` is **fair** if:
 
