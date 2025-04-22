@@ -1,4 +1,6 @@
 import io
+import math
+import collections
 from typing import List
 class Solution:
     def idealArrays(self, n: int, maxValue: int) -> int:
