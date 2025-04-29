@@ -19,3 +19,4 @@ obj = Solution()
 #data = obj.countSubarrays(nums = [1,3,2,3,3], k = 2)
 data = obj.countSubarrays(nums = [1,4,2,1], k = 3)
 print(data)
+
