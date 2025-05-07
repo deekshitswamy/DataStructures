@@ -2,7 +2,7 @@ import io
 from typing import List
 class Solution:
     def minTimeToReach(self, moveTime: List[List[int]]) -> int:
-        rows, cols = len(matrix), len(matrix[0])
+        rows, cols = len(moveTime), len(moveTime[0])
         moves = [(0, 0, 0)]
         visits = set()
         minima = 0
@@ -17,7 +17,7 @@ class Solution:
                     continue
                 if (rowx, colx) in visits: 
                     continue
-                reach = max(tym, matrix[rowx][colx]) + 1
+                reach = max(tym, moveTime[rowx][colx]) + 1
                 visits.add((rowx,colx))
                 heapq.heappush(moves, (reach, rowx, colx))
         return minima
