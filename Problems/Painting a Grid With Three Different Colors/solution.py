@@ -2,6 +2,7 @@ import io
 from typing import List
 class Solution:
     def colorTheGrid(self, m: int, n: int) -> int:
+        #dd
         pass
 
 obj = Solution()
