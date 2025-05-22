@@ -1,4 +1,5 @@
 import io
+import heapq
 from typing import List
 class Solution:
     def maxRemoval(self, nums: List[int], queries: List[List[int]]) -> int:
