@@ -2,7 +2,22 @@ import io
 from typing import List
 class Solution:
     def longestPalindrome(self, words: List[str]) -> int:
-        pass
+        res = 0
+        found = defaultdict(int)
+
+        for word in words:
+            reversed_word = word[1] + word[0]
+            if found[reversed_word] >= 1:
+                found[reversed_word] -= 1
+                res += 4
+            else:
+                found[word] += 1
+
+        for word, count in found.items():
+            if count > 0 and word[0] == word[1]:
+                return res + 2
+        
+        return res
 
 obj = Solution()
 #data = obj.longestPalindrome(words = ["lc","cl","gg"])
