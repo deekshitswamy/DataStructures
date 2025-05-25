@@ -1,5 +1,6 @@
 import io
 from typing import List
+from collections import defaultdict
 class Solution:
     def longestPalindrome(self, words: List[str]) -> int:
         res = 0
