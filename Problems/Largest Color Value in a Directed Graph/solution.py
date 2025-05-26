@@ -1,5 +1,6 @@
 import io
 from typing import List
+from collections import defaultdict
 class Solution:
     def largestPathValue(self, colors: str, edges: List[List[int]]) -> int:
         N = len(colors)
