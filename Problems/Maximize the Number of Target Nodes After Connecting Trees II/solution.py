@@ -1,6 +1,6 @@
 import io
 from typing import List
-from collections import deque
+from collections import defaultdict
 class Solution:
     def maxTargetNodes(self, edges1: List[List[int]], edges2: List[List[int]]) -> List[int]:
         g1 = defaultdict(list)
