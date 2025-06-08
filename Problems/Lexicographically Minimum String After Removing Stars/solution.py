@@ -1,5 +1,6 @@
 import io
 from typing import List
+from heapq import heappop, heappush
 class Solution:
     def clearStars(self, s: str) -> str:
         heap=[]
