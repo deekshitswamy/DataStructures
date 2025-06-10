@@ -1,5 +1,6 @@
 import io
 from typing import List
+from collections import Counter
 class Solution:
     def maxDifference(self, s: str) -> int:
         c = Counter(s)
