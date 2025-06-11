@@ -1,4 +1,5 @@
 import io
+from math import inf
 from typing import List
 class Solution:
     def maxDifference(self, s: str, k: int) -> int:
