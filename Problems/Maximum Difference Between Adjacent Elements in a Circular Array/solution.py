@@ -2,7 +2,12 @@ import io
 from typing import List
 class Solution:
     def maxAdjacentDistance(self, nums: List[int]) -> int:
-        pass
+        n = len(nums)
+        maxDist = -inf
+        for i in range(n):
+            maxDist = max(maxDist, abs(nums[i] - nums[(i + 1) % n]))
+
+        return maxDist
 
 obj = Solution()
 #data = obj.maxAdjacentDistance(nums = [1,2,4])
