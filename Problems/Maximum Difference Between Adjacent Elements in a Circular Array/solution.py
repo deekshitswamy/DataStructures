@@ -1,4 +1,5 @@
 import io
+from math import inf
 from typing import List
 class Solution:
     def maxAdjacentDistance(self, nums: List[int]) -> int:
