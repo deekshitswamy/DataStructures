@@ -1,5 +1,8 @@
 import io
 from typing import List
+from functools import reduce
+from collections import Counter
+
 class Solution:
     def minimumDeletions(self, word: str, k: int) -> int:
         def lbs(arr, x):
