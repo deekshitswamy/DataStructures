@@ -1,5 +1,7 @@
 import io
+from math import ceil
 from typing import List
+from bisect import bisect_left, bisect_right
 class Solution:
     def kthSmallestProduct(self, nums1: List[int], nums2: List[int], k: int) -> int:
         def valid_pairs(x):
