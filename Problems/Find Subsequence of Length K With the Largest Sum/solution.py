@@ -1,5 +1,7 @@
 import io
 from typing import List
+from heapq import nlargest
+from collections import Counter
 class Solution:
     def maxSubsequence(self, nums: List[int], k: int) -> List[int]:
         topk = nlargest(k, nums)
