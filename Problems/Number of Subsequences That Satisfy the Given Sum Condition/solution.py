@@ -2,7 +2,20 @@ import io
 from typing import List
 class Solution:
     def numSubseq(self, nums: List[int], target: int) -> int:
-        pass
+        nums.sort()
+
+        result = 0
+        modulo = 10 ** 9 + 7
+
+        j = len(nums) - 1
+        for i, elem in enumerate(nums):
+            while i <= j and elem + nums[j] > target:
+                j -= 1
+            if i > j:
+                break
+            result = (result + pow(2, j - i, modulo)) % modulo
+        
+        return result % modulo
 
 obj = Solution()
 #data = obj.numSubseq(nums = [3,5,6,7], target = 9)
