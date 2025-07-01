@@ -1,5 +1,6 @@
 import io
 from typing import List
+from collections import Counter
 class Solution:
     def findLHS(self, nums: List[int]) -> int:
         countOfnums = Counter(nums)
