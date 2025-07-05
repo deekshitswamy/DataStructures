@@ -2,7 +2,14 @@ import io
 from typing import List
 class Solution:
     def findLucky(self, arr: List[int]) -> int:
-        pass
+        freq = Counter(arr)
+        luckyNum = -1
+
+        for key, value in freq.items():
+            if key == value:
+                luckyNum = max(luckyNum, key)
+
+        return luckyNum
 
 obj = Solution()
 #data = obj.findLucky(arr = [2,2,3,4])
