@@ -1,5 +1,6 @@
 import io
 from typing import List
+from collections import Counter
 class FindSumPairs:
 
     def __init__(self, nums1: List[int], nums2: List[int]):
