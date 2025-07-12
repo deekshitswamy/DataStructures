@@ -1,5 +1,6 @@
 import io
 from typing import List
+from functools import lru_cache
 class Solution:
     def earliestAndLatest(self, n: int, firstPlayer: int, secondPlayer: int) -> List[int]:
         @lru_cache(None)
