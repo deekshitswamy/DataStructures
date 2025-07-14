@@ -8,7 +8,11 @@ class ListNode:
 
 class Solution:
     def getDecimalValue(self, head: ListNode) -> int:
-        pass
+        result = 0
+        while head:
+            result = (result << 1) | head.val
+            head = head.next
+        return result
 
 obj = Solution()
 #data = obj.getDecimalValue(head = [1,0,1])
