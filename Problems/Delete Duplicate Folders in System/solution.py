@@ -1,5 +1,6 @@
 import io
 from typing import List
+from collections import defaultdict
 class Solution:
     def deleteDuplicateFolder(self, paths: List[List[str]]) -> List[List[str]]:
         def serialize(node):
