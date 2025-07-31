@@ -2,7 +2,13 @@ import io
 from typing import List
 class Solution:
     def subarrayBitwiseORs(self, arr: List[int]) -> int:
-        pass
+        res = set()
+        prev = set()
+        for a in arr:
+            curr = {a | x for x in prev} | {a}
+            res |= curr
+            prev = curr
+        return len(res)
 
 obj = Solution()
 #data = obj.subarrayBitwiseORs(arr = [0])
