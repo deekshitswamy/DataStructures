@@ -1,5 +1,7 @@
 import io
+from math import inf
 from typing import List
+from collections import defaultdict
 class Solution:
     def minCost(self, basket1: List[int], basket2: List[int]) -> int:
         dct = defaultdict(int)
