@@ -1,5 +1,6 @@
 import io
 from typing import List
+from collections import defaultdict
 class Solution:
     def totalFruit(self, fruits: List[int]) -> int:
         dic = defaultdict(int)
