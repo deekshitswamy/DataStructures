@@ -1,5 +1,6 @@
 import io
 from typing import List
+from functools import lru_cache
 class Solution:
     def maxCollectedFruits(self, fruits: List[List[int]]) -> int:
         n, total = len(fruits), 0 
